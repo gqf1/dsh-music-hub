@@ -46,18 +46,32 @@ lib/client.js       浏览器半区：播放条、播放面板、歌词浮层（
 
 ## 安装
 
-### 推荐：跟卡片桌面一起装（一个全家桶包搞定）
+### 与卡片桌面的关系
 
-音乐播放器与 [卡片桌面](https://github.com/gqf1/dsh-card-desktop) 打成了一个聚合包 **`dsh-desk-all`**。
-装那一个包，两个插件一起装好，装完在插件管理器里还能**各自单独开关**。
-安装步骤见：[dsh-desk-all 安装说明](https://github.com/gqf1/dsh-card-desktop/tree/main/bundle)。
+本插件和 [卡片桌面](https://github.com/gqf1/dsh-card-desktop) 是**两个独立插件**，各自安装、独立开关：
 
-### 单独装本插件（只要音乐，不要代码工作台）
+| 你装了 | 效果 |
+|---|---|
+| 只装本插件 | 所有会话输入框上方出现**播放条**；卡片桌面不出现 |
+| 只装卡片桌面 | 代码工作台可用；卡片桌面里的「音乐」页是**空面板**，不报错、不影响其他功能 |
+| **两个都装** | 播放条 + 卡片桌面内嵌的完整音乐页（推荐） |
 
-在 DSH 的**插件管理器**里 Add plugin，填：
+> 两个插件目前只在 GitHub、没发到 npm。DSH 的聚合包（像 `@linxin666/dsh-web-all`）依赖 npm registry，
+> 而 pnpm 11 默认禁止子包使用 git 依赖，做成聚合包会安装失败（`ERR_PNPM_EXOTIC_SUBDEP`）。
+> 所以采用「两个仓库、分两次装」这个可靠做法。
+
+### 从 GitHub 直接装（推荐）
+
+DSH →「设置」→「插件管理器」→ **Add plugin**，填：
 
 ```
 github:gqf1/dsh-music-hub
+```
+
+再按同样方式装上卡片桌面：
+
+```
+github:gqf1/dsh-card-desktop
 ```
 
 然后**完全退出 DSH 再重新打开**（桌面客户端点右上角 × 只是收进托盘，要从托盘右键退出）。
