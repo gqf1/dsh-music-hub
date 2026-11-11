@@ -27,7 +27,8 @@
     "lib",
     "cordis.patch.yml",
     "README.md",
-    "NOTICE.md"
+    "NOTICE.md",
+    "LICENSE"
   ],
   "dsh": {
     "engines": { "dsh": ">=0.2.2-rc.1" },
