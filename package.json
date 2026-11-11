@@ -1,0 +1,42 @@
+{
+  "name": "dsh-music-hub",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "description": "DSH 音乐播放器：本地音乐 + QQ/酷狗/网易云三源，播放条挂输入框上方，面板可拖拽",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "music",
+    "music-player",
+    "lyrics"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gqf1/dsh-music-hub.git"
+  },
+  "homepage": "https://github.com/gqf1/dsh-music-hub",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md"
+  ],
+  "dsh": {
+    "engines": { "dsh": ">=0.2.2-rc.1" },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  }
+}

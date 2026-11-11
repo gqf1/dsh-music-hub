@@ -1,0 +1,8 @@
+# dsh-music-hub bundle patch：把双面插件行插入 profile 的插件清单。
+# 宿主半区（exports "."）跑在主机进程（曲库扫描 / 流式播放 / 在线音源路由）；
+# package.json 的 dsh.client 声明让浏览器半区（exports "./client"）在 Web GUI 加载。
+# 用 `dsh plugin --profile <name> add <本目录>` 安装；patch 自动应用，不要在
+# profile patch 里再手动插这一行。
+- insert:
+    - id: music-hub
+      name: 'dsh-music-hub'
